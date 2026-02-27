@@ -1,0 +1,72 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.assignment-list {
+  min-height: 100vh;
+  padding: $spacing-lg;
+  background: $color-gray-light;
+
+  &__title {
+    @include flex-center;           // mixin for centering
+    margin: 0 auto $spacing-lg;
+    color: $color-dark;
+    font-size: $font-size-lg;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    max-width: 1100px;
+  } 
+
+  &__cards {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;               // using variable for gap
+  } 
+
+  .assignment-card {
+    @include card;                  // mixin for background, border-radius, shadow, padding, hover
+
+    &__title {
+      margin: 0 0 $spacing-xs;
+      color: $color-dark;
+      font-size: 1.6rem;
+      font-weight: 700;
+    } 
+
+    &__difficulty {
+      margin: 0 0 $spacing-xs;
+      color: rgba($color-dark, 0.7);  
+      font-size: 1rem;
+    } 
+
+    &__difficulty-label {
+      font-weight: 600;
+      color: rgba($color-dark, 0.65); 
+    } 
+
+    &__difficulty-value {
+      font-weight: 600;
+      color: rgba($color-dark, 0.75); 
+    } 
+
+    &__description {
+      margin: 0 0 $spacing-sm;
+      color: rgba($color-dark, 0.75); 
+      font-size: 1rem;
+    } 
+
+    &__button {
+      @include button-base;           
+      background: $color-primary;     
+      color: white;
+      text-decoration: none;
+      width: fit-content;
+
+      &:hover {
+        background: $color-primary-dark; 
+        text-decoration: none;
+      }
+    } 
+  }
+}

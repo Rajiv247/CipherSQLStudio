@@ -1,0 +1,65 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+
+html {
+  font-size: 100%;  
+}
+
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; 
+  background: $color-light; 
+  color: $color-dark;       
+  line-height: 1.6;         
+  min-height: 100vh;        
+}
+
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+
+
+  @include laptop {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+
+button,
+a.button {
+  @include button-base; 
+}
+
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.loading,
+.error {
+  text-align: center;
+  padding: $spacing-xl;
+  font-size: $font-size-lg;
+}
+
+
+.error {
+  color: $color-danger;
+}

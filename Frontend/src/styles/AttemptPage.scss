@@ -1,0 +1,86 @@
+@use 'sass:color';
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.attempt-page {
+  padding: $spacing-md;
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  .left-panel {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .right-panel {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  .question-panel,
+  .sample-panel,
+  .editor-panel,
+  .results-panel {
+    @include card;  // mixin for background, border-radius, shadow, padding
+  }
+
+  .editor-header {
+    @include flex-between;
+    padding: $spacing-sm $spacing-md;
+    background: $color-gray-light;
+    border-bottom: 1px solid $color-gray;
+  }
+
+  .editor-actions {
+    display: flex;
+    gap: $spacing-sm;
+  }
+
+  .execute-btn {
+    @include button-base;
+    background: $color-success;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background: color.adjust($color-success, $lightness: -10%);
+    }
+  }
+
+  .hint-btn {
+    @include button-base;
+    background: $color-warning;
+    color: $color-dark;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  .hint-box {
+    background: white;
+    padding: $spacing-md;
+    margin: $spacing-md;
+    border-radius: $border-radius-sm;
+    border-left: 4px solid $color-primary;
+    color: $color-dark;
+  }
+
+  .query-error {
+    padding: $spacing-md;
+    color: #c0392b;
+    background: rgba(192, 57, 43, 0.08);
+    border-left: 4px solid #c0392b;
+    border-radius: $border-radius-sm;
+  }
+}

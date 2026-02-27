@@ -1,0 +1,56 @@
+ 
+//
+
+$color-primary: blue;
+$color-primary-dark: darkblue;
+$color-success: green;
+$color-warning: orange;
+$color-danger: red;
+$color-dark: black;
+$color-light: white;
+$color-gray: gray;
+$color-gray-light: lightgray;
+
+//
+
+$difficulty-easy: lightgreen;
+$difficulty-easy-text: darkgreen;
+
+$difficulty-medium: lightyellow;
+$difficulty-medium-text: brown;
+
+$difficulty-hard: pink;
+$difficulty-hard-text: darkred;
+
+// Spacing 
+
+$spacing-xs: 8px;     
+$spacing-sm: 16px;    
+$spacing-md: 24px;    
+$spacing-lg: 32px;    
+$spacing-xl: 48px;    
+
+// Border radius 
+
+$border-radius-sm: 6px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+
+// Shadows 
+
+$shadow-sm: 0 2px 8px gray;
+$shadow-md: 0 4px 12px gray;
+$shadow-hover: 0 8px 24px gray;
+
+
+
+$font-size-base: 16px;   
+$font-size-sm: 14px;     
+$font-size-lg: 20px;    
+
+// Breakpoints 
+
+$bp-mobile: 320px;
+$bp-tablet: 641px;
+$bp-laptop: 1024px;
+$bp-desktop: 1281px;

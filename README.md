@@ -85,6 +85,7 @@ VITE_API_URL → Backend API base URL
 
 Screenshots
 Assignment List Page
-<img src="screenshots/assignment-list.png" alt="Assignment List Page">
-Attempt Page
+
+Attempt Page<img width="1897" height="870" alt="assignment-page png" src="https://github.com/user-attachments/assets/05de0d87-de5a-400d-87dc-4adcd8f8f431" />
+
 <img src="screenshots/attempt-page.png" alt="Attempt Page">
